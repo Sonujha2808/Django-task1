@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>{{ user_type }} Signup</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <div class="signup">
+    <h2>{{ user_type }} Signup</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="button" ><a href='login/'>Signup</a></button>
+    </form>
+    </div>
+</body>
+</html>
